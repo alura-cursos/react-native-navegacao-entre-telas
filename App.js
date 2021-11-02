@@ -7,6 +7,7 @@ import { StatusBar, SafeAreaView, View } from 'react-native';
 // } from '@expo-google-fonts/montserrat';
 // import AppLoading from 'expo-app-loading';
 
+import AppRoutes from './src/routes/AppRoutes';
 import Cesta from './src/telas/Cesta';
 import mock from './src/mocks/cesta';
 import Home from './src/telas/Home';
@@ -24,7 +25,8 @@ export default function App() {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <StatusBar />
-      <Home />
+      <AppRoutes />
+      {/* <Home /> */}
       {/* <Cesta {...mock} /> */}
     </SafeAreaView>
   );
