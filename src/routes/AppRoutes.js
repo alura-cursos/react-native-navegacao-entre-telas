@@ -11,19 +11,18 @@ import CoracaoSvg from '../assets/coracao.svg';
 
 const Tab = createBottomTabNavigator();
 
-const CestaScreen = () => <Cesta {...mock} />;
-
 export default function AppRoutes() {
   return (
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={({ route }) => ({
-          tabBarIcon: ({ focused, color, size }) => {
+          headerShown: false,
+          tabBarIcon: ({ focused }) => {
             let Icon;
 
             if (route.name === 'Home') {
               Icon = HomeSvg;
-            } else if (route.name === 'Cesta') {
+            } else if (route.name === 'Favoritos') {
               Icon = CoracaoSvg
             }
 
@@ -34,7 +33,7 @@ export default function AppRoutes() {
         })}
       >
         <Tab.Screen name="Home" component={Home} />
-        <Tab.Screen name="Cesta" component={CestaScreen} />
+        <Tab.Screen name="Favoritos" component={Home} />
       </Tab.Navigator>
     </NavigationContainer>
   );
