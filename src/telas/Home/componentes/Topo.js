@@ -3,6 +3,7 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 
 import logo from '../../../assets/logo.png';
 import useTopo from '../../../hooks/useTopo';
+import useCesta from '../../../hooks/useCesta';
 
 export default function Topo() {
   const [boasVindas, legenda] = useTopo();

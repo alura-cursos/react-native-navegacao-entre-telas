@@ -12,30 +12,35 @@ const produtores = {
     titulo: "Produtores",
     lista: [
         {
+            id: 1,
             nome: "Green",
             imagem: green,
             distancia: gerarNumeroAleatorio(1, 500),
             estrelas: gerarNumeroAleatorio(1, 5),
         },
         {
+            id: 2,
             nome: "Salad",
             imagem: salad,
             distancia: gerarNumeroAleatorio(1, 500),
             estrelas: gerarNumeroAleatorio(1, 5),
         },
         {
+            id: 3,
             nome: "Jenny Jack Farm",
             imagem: jennyJack,
             distancia: gerarNumeroAleatorio(1, 500),
             estrelas: gerarNumeroAleatorio(1, 5),
         },
         {
+            id: 4,
             nome: "Grow",
             imagem: grow,
             distancia: gerarNumeroAleatorio(1, 500),
             estrelas: gerarNumeroAleatorio(1, 5),
         },
         {
+            id: 5,
             nome: "Potager",
             imagem: potager,
             distancia: gerarNumeroAleatorio(1, 500),
