@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import HomeRoutes from './HomeRoutes';
+import AmadosRoutes from './AmadosRoutes';
 
 import HomeSvg from '../assets/home.svg';
 import CoracaoSvg from '../assets/coracao.svg';
@@ -20,7 +21,7 @@ export default function AppRoutes() {
 
             if (route.name === 'Home') {
               Icon = HomeSvg;
-            } else if (route.name === 'Favoritos') {
+            } else if (route.name === 'Amados') {
               Icon = CoracaoSvg
             }
 
@@ -31,7 +32,7 @@ export default function AppRoutes() {
         })}
       >
         <Tab.Screen name="Home" component={HomeRoutes} />
-        <Tab.Screen name="Favoritos" component={HomeRoutes} />
+        <Tab.Screen name="Amados" component={AmadosRoutes} />
       </Tab.Navigator>
     </NavigationContainer>
   );
