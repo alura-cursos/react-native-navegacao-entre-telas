@@ -4,24 +4,21 @@ import jennyJack from '../assets/produtores/jenny-jack.png';
 import grow from '../assets/produtores/grow.png';
 import potager from '../assets/produtores/potager.png';
 
-import tomate from '../assets/frutas/Tomate.png';
-import brocolis from '../assets/frutas/Brócolis.png';
-import batata from '../assets/frutas/Batata.png';
-import pepino from '../assets/frutas/Pepino.png';
-import abobora from '../assets/frutas/Abóbora.png';
+import aspargos from '../assets/verduras/Aspargos.png';
+import tomate from '../assets/verduras/Tomate.png';
+import brocolis from '../assets/verduras/Brócolis.png';
+import batata from '../assets/verduras/Batata.png';
+import pepino from '../assets/verduras/Pepino.png';
+import abobora from '../assets/verduras/Abóbora.png';
+import cenoura from '../assets/verduras/Cenouras.png';
+import cenoura2 from '../assets/verduras/Cenouras2.png';
+import verduras from '../assets/verduras/Verduras.png';
 
 const gerarNumeroAleatorio = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 const produtores = {
-  titulo: "Produtores",
-  textos: {
-    tituloProdutores: "Produtores",
-    topoCesta: "Detalhe da cesta",
-    botaoComprar: "Comprar",
-    tituloItens: "Itens da cesta",
-  },
   lista: [
     {
       nome: "Green",
@@ -34,6 +31,7 @@ const produtores = {
             nome: "Brócolis e Pepino",
             descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
             preco: "R$ 40,00",
+            imagem: verduras
           },
           itens: [
             {
@@ -51,6 +49,8 @@ const produtores = {
             nome: "Brócolis",
             descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
             preco: "R$ 40,00",
+
+            imagem: verduras
           },
           itens: [
             {
@@ -72,6 +72,8 @@ const produtores = {
             nome: "Salada completa",
             descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
             preco: "R$ 40,00",
+
+            imagem: verduras
           },
           itens: [
             {
@@ -93,6 +95,8 @@ const produtores = {
             nome: "Tomate e pepino",
             descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
             preco: "R$ 40,00",
+
+            imagem: verduras
           },
           itens: [
             {
@@ -118,6 +122,8 @@ const produtores = {
             nome: "Tomate e Brócolis",
             descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
             preco: "R$ 40,00",
+
+            imagem: verduras
           },
           itens: [
             {
@@ -147,6 +153,8 @@ const produtores = {
             nome: "Tomate e Brócolis",
             descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
             preco: "R$ 40,00",
+
+            imagem: verduras
           },
           itens: [
             {
@@ -184,6 +192,8 @@ const produtores = {
             nome: "Tomate e Brócolis",
             descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
             preco: "R$ 40,00",
+
+            imagem: verduras
           },
           itens: [
             {
@@ -213,6 +223,8 @@ const produtores = {
             nome: "Tomate e Brócolis",
             descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
             preco: "R$ 40,00",
+
+            imagem: verduras
           },
           itens: [
             {
@@ -250,6 +262,8 @@ const produtores = {
             nome: "Tomate e Brócolis",
             descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
             preco: "R$ 40,00",
+
+            imagem: verduras
           },
           itens: [
             {
@@ -279,6 +293,8 @@ const produtores = {
             nome: "Tomate e Brócolis",
             descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
             preco: "R$ 40,00",
+
+            imagem: verduras
           },
           itens: [
             {

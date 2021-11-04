@@ -1,20 +1,22 @@
 import React from 'react';
 import { Image, StyleSheet, View, TouchableOpacity } from 'react-native';
 
+import useTextos from '../../../hooks/useTextos';
 import Texto from '../../../componentes/Texto';
 
-export default function Detalhes({ nome, logoFazenda, nomeFazenda, descricao, preco, botao }) {
+export default function Detalhes({ nome, produtor, descricao, preco }) {
+  const { botaoComprar } = useTextos();
   return <>
     <Texto style={estilos.nome}>{ nome }</Texto>
     <View style={estilos.fazenda}>
-      <Image source={logoFazenda} style={estilos.imagemFazenda} />
-      <Texto style={estilos.nomeFazenda}>{ nomeFazenda }</Texto>
+      <Image source={produtor.imagem} style={estilos.imagemFazenda} />
+      <Texto style={estilos.nomeFazenda}>{ produtor.nome }</Texto>
     </View>
     <Texto style={estilos.descricao}>{ descricao }</Texto>
     <Texto style={estilos.preco}>{ preco }</Texto>
 
     <TouchableOpacity style={estilos.botao} onPress={() => {}}>
-      <Texto style={estilos.textoBotao}>{ botao }</Texto>
+      <Texto style={estilos.textoBotao}>{ botaoComprar }</Texto>
     </TouchableOpacity>
   </>
 }

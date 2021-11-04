@@ -3,13 +3,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import HomeRoutes from './HomeRoutes';
-import Cesta from '../telas/Cesta';
-import mock from '../mocks/cesta';
 
 import HomeSvg from '../assets/home.svg';
 import CoracaoSvg from '../assets/coracao.svg';
 
-const Teste = () => <Cesta {...mock} />
 const Tab = createBottomTabNavigator();
 
 export default function AppRoutes() {
@@ -34,7 +31,7 @@ export default function AppRoutes() {
         })}
       >
         <Tab.Screen name="Home" component={HomeRoutes} />
-        <Tab.Screen name="Favoritos" component={Teste} />
+        <Tab.Screen name="Favoritos" component={HomeRoutes} />
       </Tab.Navigator>
     </NavigationContainer>
   );

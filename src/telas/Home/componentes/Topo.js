@@ -2,10 +2,10 @@ import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 
 import logo from '../../../assets/logo.png';
-import useTopo from '../../../hooks/useTopo';
+import useTextos from '../../../hooks/useTextos';
 
 export default function Topo() {
-  const [boasVindas, legenda] = useTopo();
+  const { boasVindas, legenda } = useTextos();
 
   return <View style={estilos.topo}>
     <Image source={logo} style={estilos.imagem} />
