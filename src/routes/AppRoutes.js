@@ -3,7 +3,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import HomeRoutes from './HomeRoutes';
-import AmadosRoutes from './AmadosRoutes';
 
 import HomeSvg from '../assets/home.svg';
 import CoracaoSvg from '../assets/coracao.svg';
@@ -32,7 +31,7 @@ export default function AppRoutes() {
         })}
       >
         <Tab.Screen name="Home" component={HomeRoutes} />
-        <Tab.Screen name="Amados" component={AmadosRoutes} />
+        <Tab.Screen name="Amados" component={HomeRoutes} initialParams={{amados: true}}/>
       </Tab.Navigator>
     </NavigationContainer>
   );

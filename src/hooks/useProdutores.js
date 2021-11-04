@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 import { carregaProdutores } from '../servicos/carregaDados';
 
-export default function useProdutores() {
+export default function useProdutores(amados) {
     const [lista, setLista] = useState([]);
 
     useEffect(() => {
@@ -10,7 +10,14 @@ export default function useProdutores() {
         retorno.lista.sort(
             (produtor1, produtor2) => produtor1.distancia - produtor2.distancia,
         );
-        setLista(retorno.lista);
+        let novaLista = retorno.lista;
+        
+        if (amados) {
+            novaLista = novaLista.filter(
+                (produtor) => produtor.estrelas > 3
+            );
+        }
+        setLista(novaLista);
     }, []);
 
     return lista;

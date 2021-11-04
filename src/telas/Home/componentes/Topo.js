@@ -4,20 +4,38 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 import logo from '../../../assets/logo.png';
 import useTextos from '../../../hooks/useTextos';
 
-export default function Topo() {
-  const { boasVindas, legenda } = useTextos();
+export default function Topo({ amados, compra }) {
+  const { boasVindas, legenda, legendaAmados, mensagemCompra } = useTextos();
+  const compraTexto = mensagemCompra?.replace("%nome%", compra);
 
-  return <View style={estilos.topo}>
-    <Image source={logo} style={estilos.imagem} />
-    <Text style={estilos.boasVindas}>{boasVindas}</Text>
-    <Text style={estilos.legenda}>{legenda}</Text>
-  </View>
+  return <>
+    <View style={estilos.topo}>
+      <Image source={logo} style={estilos.imagem} />
+      <Text style={estilos.boasVindas}>{amados ? "" : boasVindas}</Text>
+      <Text style={estilos.legenda}>{amados ? legendaAmados : legenda}</Text>
+    </View>
+    {!!compra && 
+      <View style={estilos.compra}>
+        <Text style={estilos.compraMensagem}>{compraTexto}</Text>
+      </View>
+    }
+    
+  </>
 }
 
 const estilos = StyleSheet.create({
   topo: {
     backgroundColor: '#F6F6F6',
     padding: 16,
+  },
+  compra: {
+    backgroundColor: '#EAF5F3',
+    padding: 16,
+  },
+  compraMensagem: {
+    fontSize: 16,
+    lineHeight: 26,
+    color: '#464646',
   },
   imagem: {
     width: 70,
