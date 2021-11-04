@@ -1,5 +1,6 @@
 import React, { useReducer, useMemo } from 'react';
 import { View, TouchableOpacity, Text, Image, StyleSheet } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import Estrelas from '../../../componentes/Estrelas';
 
@@ -9,6 +10,7 @@ const distanciaEmMetros = (distancia) => {
 }
 
 export default function Produtor({ nome, imagem, distancia, estrelas }) {
+    const navigation = useNavigation();
     const [selecionado, inverterSelecionado] = useReducer(
         (selecionado) => !selecionado,
         false
@@ -21,7 +23,7 @@ export default function Produtor({ nome, imagem, distancia, estrelas }) {
 
     return <TouchableOpacity 
             style={estilos.cartao}
-            onPress={inverterSelecionado}
+            onPress={() => navigation.navigate('Produtor')}
         >
         <Image source={imagem} style={estilos.imagem} accessibilityLabel={nome} />
         <View style={estilos.informacoes}>

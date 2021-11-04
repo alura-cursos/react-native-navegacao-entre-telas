@@ -4,13 +4,13 @@ import { FlatList, Text, StyleSheet } from 'react-native';
 import Produtor from './Produtor';
 import useProdutores from '../../../hooks/useProdutores';
 
-export default function Produtores({ topo: Topo}) {
-    const [titulo, lista] = useProdutores();
+export default function Produtores({ topo: Topo }) {
+    const [lista, textos] = useProdutores();
 
     const TopoLista = () => {
         return <>
             <Topo />
-            <Text style={estilos.titulo}>{ titulo }</Text>
+            <Text style={estilos.titulo}>{ textos?.tituloProdutores }</Text>
         </>
     }
 
