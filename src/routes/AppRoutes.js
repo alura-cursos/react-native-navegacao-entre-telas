@@ -20,7 +20,7 @@ export default function AppRoutes() {
 
             if (route.name === 'Home') {
               Icon = HomeSvg;
-            } else if (route.name === 'Amados') {
+            } else if (route.name === 'Melhores Avaliados') {
               Icon = CoracaoSvg
             }
 
@@ -31,7 +31,7 @@ export default function AppRoutes() {
         })}
       >
         <Tab.Screen name="Home" component={HomeRoutes} />
-        <Tab.Screen name="Amados" component={HomeRoutes} initialParams={{amados: true}}/>
+        <Tab.Screen name="Melhores Avaliados" component={HomeRoutes} initialParams={{amados: true}}/>
       </Tab.Navigator>
     </NavigationContainer>
   );
