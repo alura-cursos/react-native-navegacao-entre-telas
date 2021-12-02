@@ -31,7 +31,7 @@ const produtores = {
             nome: "Brócolis e Pepino",
             descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
             preco: "R$ 40,00",
-            imagem: verduras
+            imagem: pepino
           },
           itens: [
             {
@@ -50,7 +50,7 @@ const produtores = {
             descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
             preco: "R$ 40,00",
 
-            imagem: verduras
+            imagem: brocolis
           },
           itens: [
             {
@@ -96,7 +96,7 @@ const produtores = {
             descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
             preco: "R$ 40,00",
 
-            imagem: verduras
+            imagem: tomate
           },
           itens: [
             {
@@ -119,33 +119,17 @@ const produtores = {
       cestas: [
         {
           detalhes: {
-            nome: "Tomate e Brócolis",
+            nome: "Muita Batata",
             descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
             preco: "R$ 40,00",
 
-            imagem: verduras
+            imagem: batata
           },
           itens: [
-            {
-              nome: "Tomate",
-              imagem: tomate,
-            },
-            {
-              nome: "Brócolis",
-              imagem: brocolis,
-            },
             {
               nome: "Batata",
               imagem: batata,
             },
-            {
-              nome: "Pepino",
-              imagem: pepino,
-            },
-            {
-              nome: "Abóbora",
-              imagem: abobora,
-            }
           ]
         },
         {
@@ -154,7 +138,7 @@ const produtores = {
             descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
             preco: "R$ 40,00",
 
-            imagem: verduras
+            imagem: brocolis
           },
           itens: [
             {
@@ -165,18 +149,6 @@ const produtores = {
               nome: "Brócolis",
               imagem: brocolis,
             },
-            {
-              nome: "Batata",
-              imagem: batata,
-            },
-            {
-              nome: "Pepino",
-              imagem: pepino,
-            },
-            {
-              nome: "Abóbora",
-              imagem: abobora,
-            }
           ]
         }
       ]
@@ -189,59 +161,35 @@ const produtores = {
       cestas: [
         {
           detalhes: {
-            nome: "Tomate e Brócolis",
+            nome: "Abobora e Aspargos",
             descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
             preco: "R$ 40,00",
 
-            imagem: verduras
+            imagem: aspargos
           },
           itens: [
             {
-              nome: "Tomate",
-              imagem: tomate,
-            },
-            {
-              nome: "Brócolis",
-              imagem: brocolis,
-            },
-            {
-              nome: "Batata",
-              imagem: batata,
-            },
-            {
-              nome: "Pepino",
-              imagem: pepino,
-            },
-            {
               nome: "Abóbora",
               imagem: abobora,
+            },
+            {
+              nome: "Aspargos",
+              imagem: aspargos,
             }
           ]
         },
         {
           detalhes: {
-            nome: "Tomate e Brócolis",
+            nome: "Tomate e Abobora",
             descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
             preco: "R$ 40,00",
 
-            imagem: verduras
+            imagem: abobora
           },
           itens: [
             {
               nome: "Tomate",
               imagem: tomate,
-            },
-            {
-              nome: "Brócolis",
-              imagem: brocolis,
-            },
-            {
-              nome: "Batata",
-              imagem: batata,
-            },
-            {
-              nome: "Pepino",
-              imagem: pepino,
             },
             {
               nome: "Abóbora",
@@ -259,63 +207,39 @@ const produtores = {
       cestas: [
         {
           detalhes: {
-            nome: "Tomate e Brócolis",
+            nome: "Pepinos",
             descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
             preco: "R$ 40,00",
 
-            imagem: verduras
+            imagem: pepino
           },
           itens: [
-            {
-              nome: "Tomate",
-              imagem: tomate,
-            },
-            {
-              nome: "Brócolis",
-              imagem: brocolis,
-            },
-            {
-              nome: "Batata",
-              imagem: batata,
-            },
             {
               nome: "Pepino",
               imagem: pepino,
             },
-            {
-              nome: "Abóbora",
-              imagem: abobora,
-            }
           ]
         },
         {
           detalhes: {
-            nome: "Tomate e Brócolis",
+            nome: "Brócolis, Aspargos e Cenoura",
             descricao: "Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha",
             preco: "R$ 40,00",
 
-            imagem: verduras
+            imagem: cenoura2
           },
           itens: [
-            {
-              nome: "Tomate",
-              imagem: tomate,
-            },
             {
               nome: "Brócolis",
               imagem: brocolis,
             },
             {
-              nome: "Batata",
-              imagem: batata,
+              nome: "Aspargos",
+              imagem: aspargos,
             },
             {
-              nome: "Pepino",
-              imagem: pepino,
-            },
-            {
-              nome: "Abóbora",
-              imagem: abobora,
+              nome: "Cenoura",
+              imagem: cenoura,
             }
           ]
         }
