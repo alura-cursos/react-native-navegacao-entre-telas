@@ -10,12 +10,12 @@ import useTextos from '../../hooks/useTextos';
 export default function Produtores() {
   const navigation = useNavigation();
   const route = useRoute();
-  const lista = useProdutores(route.params?.amados);
+  const lista = useProdutores(route.params?.melhoresAvaliados);
   const { tituloProdutores } = useTextos();
 
   const TopoLista = () => {
     return <>
-      <Topo amados={route.params?.amados} compra={route.params?.compra} />
+      <Topo melhoresAvaliados={route.params?.melhoresAvaliados} compra={route.params?.compra} />
       <Text style={estilos.titulo}>{tituloProdutores}</Text>
     </>
   }
@@ -23,7 +23,7 @@ export default function Produtores() {
   return <FlatList
     data={lista}
     renderItem={
-      ({ item }) => <Produtor {...item} onPress={
+      ({ item }) => <Produtor {...item} aoPressionar={
         () => navigation.navigate('Produtor', item)
       } />
     }

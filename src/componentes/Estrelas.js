@@ -16,7 +16,7 @@ export default function Estrelas({
             listaEstrelas.push(
                 <Estrela
                     key={i}
-                    onPress={() => setQuantidade(i + 1)}
+                    aoPressionar={() => setQuantidade(i + 1)}
                     desabilitada={!editavel}
                     preenchida={i < quantidade}
                     grande={grande} />

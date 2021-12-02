@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 import { carregaProdutores } from '../servicos/carregaDados';
 
-export default function useProdutores(amados) {
+export default function useProdutores(melhoresAvaliados) {
     const [lista, setLista] = useState([]);
 
     useEffect(() => {
@@ -12,7 +12,7 @@ export default function useProdutores(amados) {
         );
         let novaLista = retorno.lista;
         
-        if (amados) {
+        if (melhoresAvaliados) {
             novaLista = novaLista.filter(
                 (produtor) => produtor.estrelas > 3
             );

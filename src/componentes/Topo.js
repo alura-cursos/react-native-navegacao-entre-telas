@@ -8,15 +8,16 @@ import topo from '../assets/topo.png';
 import voltar from '../assets/voltar.png';
 import { useNavigation } from '@react-navigation/core';
 
-const width = Dimensions.get('screen').width;
+const largura = Dimensions.get('screen').width;
+const ALTURA_PADRAO = 270;
 
-export default function Topo({ titulo, imagem = topo, altura = 270 }) {
+export default function Topo({ titulo, imagem = topo, altura = ALTURA_PADRAO }) {
   const navigation = useNavigation();
 
   const estilos = funcaoEstilos(altura);
   return <>
     <Image source={imagem} style={estilos.topo} />
-    <Gradiente width={width} height={130 / 360 * width} style={estilos.gradiente}/>
+    <Gradiente width={largura} height={130 / 360 * largura} style={estilos.gradiente}/>
     <Texto style={estilos.titulo}>{ titulo }</Texto>
     <TouchableOpacity 
       onPress={() => navigation.goBack()}

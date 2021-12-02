@@ -8,7 +8,7 @@ const distanciaEmMetros = (distancia) => {
     return `${distancia}m`;
 }
 
-export default function Produtor({ nome, imagem, distancia, estrelas, onPress }) {
+export default function Produtor({ nome, imagem, distancia, estrelas, aoPressionar }) {
     const distanciaTexto = useMemo(
         () => distanciaEmMetros(distancia), 
         [distancia]
@@ -16,7 +16,7 @@ export default function Produtor({ nome, imagem, distancia, estrelas, onPress })
 
     return <TouchableOpacity 
             style={estilos.cartao}
-            onPress={onPress}
+            onPress={aoPressionar}
         >
         <Image source={imagem} style={estilos.imagem} accessibilityLabel={nome} />
         <View style={estilos.informacoes}>

@@ -5,7 +5,7 @@ import estrela from '../assets/estrela.png';
 import estrelaCinza from '../assets/estrelaCinza.png';
 
 export default function Estrela({
-    onPress,
+    aoPressionar,
     desabilitada = true,
     preenchida,
     grande = false,
@@ -20,7 +20,7 @@ export default function Estrela({
     }
 
     return <TouchableOpacity
-            onPress={onPress}
+            onPress={aoPressionar}
             disabled={desabilitada}
             >
             <Image source={getImagem()} style={estilos.estrela} />

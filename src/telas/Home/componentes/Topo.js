@@ -4,15 +4,15 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 import logo from '../../../assets/logo.png';
 import useTextos from '../../../hooks/useTextos';
 
-export default function Topo({ amados, compra }) {
-  const { boasVindas, legenda, legendaAmados, mensagemCompra } = useTextos();
+export default function Topo({ melhoresAvaliados, compra }) {
+  const { boasVindas, legenda, legendaMelhoresAvaliados, mensagemCompra } = useTextos();
   const compraTexto = mensagemCompra?.replace("%nome%", compra);
 
   return <>
     <View style={estilos.topo}>
       <Image source={logo} style={estilos.imagem} />
-      <Text style={estilos.boasVindas}>{amados ? "" : boasVindas}</Text>
-      <Text style={estilos.legenda}>{amados ? legendaAmados : legenda}</Text>
+      <Text style={estilos.boasVindas}>{melhoresAvaliados ? "" : boasVindas}</Text>
+      <Text style={estilos.legenda}>{melhoresAvaliados ? legendaMelhoresAvaliados : legenda}</Text>
     </View>
     {!!compra && 
       <View style={estilos.compra}>

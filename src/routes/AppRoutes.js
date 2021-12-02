@@ -31,7 +31,7 @@ export default function AppRoutes() {
         })}
       >
         <Tab.Screen name="Home" component={HomeRoutes} />
-        <Tab.Screen name="Melhores Avaliados" component={HomeRoutes} initialParams={{amados: true}}/>
+        <Tab.Screen name="Melhores Avaliados" component={HomeRoutes} initialParams={{melhoresAvaliados: true}}/>
       </Tab.Navigator>
     </NavigationContainer>
   );
