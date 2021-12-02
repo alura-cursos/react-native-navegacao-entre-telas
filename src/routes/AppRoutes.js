@@ -16,12 +16,10 @@ export default function AppRoutes() {
         screenOptions={({ route }) => ({
           headerShown: false,
           tabBarIcon: ({ focused }) => {
-            let Icon;
+            let Icon = HomeSvg;
 
-            if (route.name === 'Home') {
-              Icon = HomeSvg;
-            } else if (route.name === 'Melhores Avaliados') {
-              Icon = CoracaoSvg
+            if (route.name === 'Melhores Avaliados') {
+              Icon = CoracaoSvg;
             }
 
             return <Icon color={focused ? '#2A9F85' : '#C7C7C7'} />;
