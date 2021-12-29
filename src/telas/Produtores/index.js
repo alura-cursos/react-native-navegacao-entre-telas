@@ -26,7 +26,7 @@ export default function Produtores({ melhoresProdutores }) {
       ({ item }) => <Produtor 
         {...item} 
         aoPressionar={() => {
-          navigation.navigate('Produtor');
+          navigation.navigate('Produtor', item);
         }} />
     }
     keyExtractor={({ nome }) => nome}
