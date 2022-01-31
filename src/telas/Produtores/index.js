@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FlatList, Text, StyleSheet } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 
 import Produtor from './componentes/Produtor';
 import Topo from './componentes/Topo';
@@ -9,6 +9,10 @@ import useTextos from '../../hooks/useTextos';
 
 export default function Produtores({ melhoresProdutores }) {
   const navigation = useNavigation();
+  const route = useRoute();
+
+  const nomeCompra = route.params?.compra.nome;
+  console.log(nomeCompra);
 
   const lista = useProdutores(melhoresProdutores);
   const { tituloProdutores } = useTextos();
@@ -16,6 +20,7 @@ export default function Produtores({ melhoresProdutores }) {
   const TopoLista = () => {
     return <>
       <Topo melhoresProdutores={melhoresProdutores} />
+      <Text>{ nomeCompra }</Text>
       <Text style={estilos.titulo}>{tituloProdutores}</Text>
     </>
   }
