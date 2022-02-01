@@ -145,7 +145,6 @@
 				C06C17C28FD112D9FE4F307C /* Pods-orgsNavegacao-orgsNavegacaoTests.debug.xcconfig */,
 				82E61F3960C76E92A4311992 /* Pods-orgsNavegacao-orgsNavegacaoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -486,6 +485,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
+				EXCLUDED_ARCHS = x86_64;
 				INFOPLIST_FILE = orgsNavegacao/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -511,6 +511,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				EXCLUDED_ARCHS = x86_64;
 				INFOPLIST_FILE = orgsNavegacao/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
