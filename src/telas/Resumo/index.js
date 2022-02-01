@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRoute, useNavigation } from '@react-navigation/native';
 import { Text, View, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
 import useTextos from '../../hooks/useTextos';
@@ -7,6 +8,9 @@ import VoltarSVG from '../../assets/voltar.svg';
 import sucesso from '../../assets/sucesso.png';
 
 export default function Resumo() {
+  const navigation = useNavigation();
+  const route = useRoute();
+
   const {
     mensagemCompra,
     topoCompra,
@@ -15,11 +19,14 @@ export default function Resumo() {
     botaoProdutorCompra
   } = useTextos();
 
+  const compra = route.params.compra;
+  const mensagem = mensagemCompra?.replace('$NOME', compra.nome);
+
   return <View style={estilos.tela}>
     <View style={estilos.topo}>
       <TouchableOpacity
         style={estilos.topoVoltar}
-        onPress={() => { }}
+        onPress={() => navigation.goBack()}
       >
         <VoltarSVG />
       </TouchableOpacity>
@@ -32,17 +39,17 @@ export default function Resumo() {
 
       <View style={estilos.textos}>
         <Text style={estilos.titulo}>{tituloCompra}</Text>
-        <Text style={estilos.mensagem}>{mensagemCompra}</Text>
+        <Text style={estilos.mensagem}>{mensagem}</Text>
 
         <TouchableOpacity
           style={estilos.botao}
-          onPress={() => {}}>
+          onPress={() => navigation.popToTop() /* para mostrar mensagem na Home: navigation.navigate('HomeScreen', { compra }) */}>
           <Text style={estilos.textoBotao}>{botaoHomeCompra}</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={[estilos.botao, estilos.botaoProdutor]}
-          onPress={() => {}}>
+          onPress={() => navigation.pop(2)}>
           <Text style={[estilos.textoBotao, estilos.textoBotaoProdutor ]}>{botaoProdutorCompra}</Text>
         </TouchableOpacity>
       </View>
